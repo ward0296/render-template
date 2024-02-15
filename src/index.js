@@ -1,19 +1,19 @@
 require('dotenv/config');
 const express = require('express');
 
-const { STUDENT_NAME } = process.env;
+const { Ahmed_Wardhere } = process.env;
 
 const app = express();
 
 app.get('/', (_req, res) => {
-  if (!STUDENT_NAME) {
+  if (!Ahmed_Wardhere) {
     res.status(500).json({
       error: { message: 'Environment variable STUDENT_NAME not provided' }
     });
     return;
   }
   res.json({
-    data: `Hello from ${STUDENT_NAME}!`
+    data: `Hello from ${Ahmed_Wardhere}!`
   });
 });
 
